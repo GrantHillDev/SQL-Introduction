@@ -8,21 +8,21 @@ select * from products -- select * from products;//the semicolon isn't used unti
 where price = 1400;
 -- find all products that cost $11.99 or $13.99
 select * from products
-where price = 11.99 or price = 13.99; -- where price = 11.99 or 13.99;//need to be speicific here.
+where price = 11.99 or price = 13.99; -- where price = 11.99 or 13.99;//need to be specific here.
 -- find all products that do NOT cost 11.99 - using NOT
 select * from products
 where not price = 11.99;
 -- find all products and sort them by price from greatest to least
 select * from products -- this is how you build a query; by looking at all of the data from all of the tables.
-order by price desc; -- order by price;//default order by functioanlity has items with the least value starting form the top, and then the greaest valued items at the bottom.
+order by price desc; -- order by price;//default order by functionality has items with the least value starting form the top, and then the greatest valued items at the bottom.
 -- find all employees who don't have a middle initial
 select * from employees
-where middleinitial is null; -- where middle initial is null;//cannot have a spcae between category types.
+where middleinitial is null; -- where middle initial is null;//cannot have a space between category types.
 -- find distinct product prices
 select distinct(price) from products;
 -- find all employees whose first name starts with the letter ‘j’
 select * from employees -- //% sign must be used in tandem with the like keyword.
-where firstname like 'j%'; -- The % sign acts like more of a generality; a wild card, at least if it's typed in at the very end, as opposed to the start (%j [this insinuates that the letter j would be specified at the end of a first name in this contect] versus j% [this suggests that j could be at the beggining of the first name]). There's also '%j%' which seems ot showcase first names that or end with the letter j here.
+where firstname like 'j%'; -- The % sign acts like more of a generality; a wild card, at least if it's typed in at the very end, as opposed to the start (%j [this insinuates that the letter j would be specified at the end of a first name in this context versus j% [this suggests that j could be at the beginning of the first name]). There's also '%j%' which seems ot showcase first names that or end with the letter j here.
 -- find all Macbooks
 select * from products
 where name like '%macbook%';
@@ -33,7 +33,7 @@ where onsale = 1;
 select avg(price) from products;
 -- find all Geek Squad employees who don't have a middle initial
 select * from employees
-where title like '%geek squad%' and middleinitial is null; -- //where title like '%geek squad%' && middleinitial is null; I'm so used to utilzing the && operators in C#.... that I used them here in SQL, lol.... and SQL didn't even throw compile error nor a run time error.
+where title like '%geek squad%' and middleinitial is null; -- //where title like '%geek squad%' && middleinitial is null; I'm so used to utilizing the && operators in C#.... that I used them here in SQL, lol.... and SQL didn't even throw compile error nor a run time error.
 -- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
 select * from products
 where stocklevel between 500 and 1200
