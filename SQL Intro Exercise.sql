@@ -29,7 +29,7 @@ WHERE NAME LIKE '%macbook%';
 -- find all products that are on sale
 SELECT * FROM products
 WHERE onsale = 1; -- finally got this one up and working -- altering the commands from lower to capital casing made no difference, but for the sake of good coding practices; I'll maintain the habit of writing int he commands and functions for SQL IN CAPITAL LETTERS.
--- find the average price of all products
+-- find the average price of all products -- WHERE onsale; this works too because onsale can be made to return a boolean, where presumably 1 represents a value fo true, and I'm guessing that 0 represents a value of false.
 SELECT AVG(price) FROM products;
 -- find all Geek Squad employees who don't have a middle initial
 SELECT * FROM employees
